@@ -5,7 +5,7 @@ if [[ -z "$1" ]]; then
 	dir=$HOME
 fi
 
-selected=$(fd -H . $dir -d 1 | fzf)
+selected=$(fd . $dir -d 1 | fzf)
 if [[ -z "$selected" ]]; then
 	exit 0
 fi
