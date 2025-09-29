@@ -17,11 +17,12 @@ switch_to() {
         #TODO 
         echo zellij is missing
 	else
-		zellij a $selected_name
+		echo zellij a $selected_name
 	fi
-
+    cd $selected
 }
 
+switch_to
 if zellij list-sessions | grep -q $selected_name; then
     zellij a $selected_name
 else
